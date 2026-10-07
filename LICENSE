@@ -1,0 +1,47 @@
+MIT License
+
+Copyright (c) 2026 [Your Full Name]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Inspiration and Attribution Notice
+
+This project was created as a learning exercise after watching the following
+YouTube video:
+
+    Title:   SMOOTH SCROLL 3D Animated Website Design | CSS & JavaScript Magic!
+    Creator: @code_with_Me22
+    URL:     [YOUTUBE_VIDEO_URL]
+
+The video served as visual and conceptual inspiration only. The HTML, CSS and
+JavaScript in this repository, including all SVG illustrations, were written
+independently. No source code or artwork from the video or its creator is
+included.
+
+The MIT License above applies solely to the original work in this repository.
+It does not grant any rights to the video, its content, or the intellectual
+property of its creator. This project is not affiliated with, endorsed by, or
+sponsored by the creator of the video or by YouTube.
+
+Third-party resources:
+
+- Hanken Grotesk typeface, loaded from Google Fonts under the SIL Open Font
+  License 1.1.
