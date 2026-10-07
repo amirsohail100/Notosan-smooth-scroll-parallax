@@ -57,10 +57,10 @@ body{font-family:var(--sans);color:var(--ink);background:#0d0b3a;overflow-x:hidd
 .clouds g{animation:drift 60s linear infinite alternate}
 .clouds g:nth-child(2){animation-duration:80s;animation-direction:alternate-reverse}
 @keyframes drift{from{transform:translateX(-60px)}to{transform:translateX(90px)}}
-.bird{animation:flap .5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
-@keyframes flap{to{transform:scaleY(.35)}}
-.flock{animation:fly 26s linear infinite}
-@keyframes fly{from{transform:translate(-120px,20px)}to{transform:translate(220px,-40px)}}
+.bird{animation:flap 1.8s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+@keyframes flap{to{transform:scaleY(.55)}}
+.flock{animation:fly 70s ease-in-out infinite alternate}
+@keyframes fly{from{transform:translate(-60px,10px)}to{transform:translate(90px,-20px)}}
 .streak{stroke-dasharray:60 90;animation:flow 1.6s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-150}}
 .fly{animation:float 6s ease-in-out infinite alternate}
