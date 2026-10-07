@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Notosan: a cinematic, scroll-driven parallax journey through Japan's Noto Nature Park, built with vanilla HTML, CSS and JavaScript.">
+  <title>Notosan | Smooth Scroll Nature Journey</title>
+
+  <!-- Typeface: Hanken Grotesk (SIL Open Font License). Falls back to system sans-serif when offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Primary navigation -->
+  <header class="site-header">
+    <a class="brand" href="#" data-target-scene="0">Notosan</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#" data-target-scene="1">Community</a>
+      <a href="#" data-target-scene="2">About</a>
+      <a href="#" data-target-scene="1">Support</a>
+      <a href="#" data-target-scene="0">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section indicator -->
+  <nav class="section-dots" aria-label="Sections">
+    <button type="button" data-target-scene="0" aria-label="Go to Visit"></button>
+    <button type="button" data-target-scene="1" aria-label="Go to Tranquility"></button>
+    <button type="button" data-target-scene="2" aria-label="Go to Biodiversity"></button>
+  </nav>
+
+  <!--
+    The scroll track provides the scrollable height. The stage stays pinned to the viewport
+    while the script maps scroll progress to scene transitions and layer parallax.
+    Each layer's data-depth sets how strongly it reacts (0 = static, 1 = closest to the viewer).
+    Layer contents are SVG artwork generated in js/main.js.
+  -->
+  <main class="scroll-track">
+    <div class="scroll-stage">
+
+      <!-- Scene 1: Visit -->
+      <section class="scene scene--hero" aria-label="Visit">
+        <div class="layer layer--sky" data-depth="0"></div>
+        <div class="layer" data-depth="0.06"><svg id="hero-sun" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer layer--clouds" data-depth="0.16"><svg id="hero-clouds" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.3"><svg id="hero-hills" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.5"><svg id="hero-birds" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.78"><svg id="hero-foreground" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="1"><svg id="hero-character" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+
+        <div class="scene-content scene-content--hero">
+          <p class="eyebrow" data-order="0"><i class="equalizer" aria-hidden="true"><b></b><b></b><b></b></i>Journey to new frontiers &mdash; Noto Nature Park</p>
+          <h1 data-order="1">VISIT</h1>
+          <p class="scene-text" data-order="2">Far from the frenetic energy of Japan's great cities lies the ancient hamlet of Noto. Soaring peaks, tranquil lakes and endless waterfalls come together to form a habitat for an extraordinary range of species.</p>
+          <button class="button" type="button" data-order="3" data-target-scene="1">Start the journey <span aria-hidden="true">&#9656;</span></button>
+        </div>
+      </section>
+
+      <!-- Scene 2: Tranquility -->
+      <section class="scene scene--tranquility" aria-label="Tranquility">
+        <div class="layer layer--sky" data-depth="0"></div>
+        <div class="layer" data-depth="0.1"><svg id="calm-backdrop" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.3"><svg id="calm-waterfall" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer layer--rays" data-depth="0.4"><svg id="calm-rays" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.6"><svg id="calm-cliff" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.9"><svg id="calm-foreground" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.7"><svg id="calm-birds" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+
+        <div class="scene-content scene-content--right">
+          <p class="eyebrow" data-order="0">01 &mdash; Experience</p>
+          <h2 data-order="1">Tranquility</h2>
+          <hr data-order="1">
+          <p class="scene-text" data-order="2">Surprising and captivating in equal measure, Noto is unlike anywhere else. Its peaks, lakes and waterfalls shape a landscape of lasting calm, where the pace of life slows and every moment feels unhurried.</p>
+          <a class="text-link" data-order="3" href="#" data-target-scene="2">Learn more</a>
+        </div>
+      </section>
+
+      <!-- Scene 3: Biodiversity -->
+      <section class="scene scene--biodiversity" aria-label="Biodiversity">
+        <div class="layer layer--sky" data-depth="0"></div>
+        <div class="layer" data-depth="0.1"><svg id="bio-backdrop" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.4"><svg id="bio-midground" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.8"><svg id="bio-foreground" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+        <div class="layer" data-depth="0.95"><svg id="bio-fireflies" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+
+        <div class="scene-content scene-content--left">
+          <p class="eyebrow" data-order="0">02 &mdash; Habitat</p>
+          <h2 data-order="1">Biodiversity</h2>
+          <hr data-order="1">
+          <p class="scene-text" data-order="2">Noto's varied terrain supports remarkable wildlife, from rare birds and deer to delicate alpine flora. Together they form a thriving ecosystem that rewards patient and respectful exploration.</p>
+          <a class="text-link" data-order="3" href="#" data-target-scene="0">Back to the start</a>
+        </div>
+      </section>
+
+      <div class="scroll-hint">Scroll</div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
